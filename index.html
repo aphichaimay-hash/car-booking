@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>จองรถ</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="จองรถ">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#e11d74">
+<style>
+html,body{margin:0;height:100%;background:linear-gradient(135deg,#e11d74,#ff7eb3);font-family:system-ui,"Noto Sans Thai",sans-serif;color:#fff}
+#ld{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}
+#ld img{width:96px;height:96px;border-radius:22px;box-shadow:0 8px 24px #0003}
+.sp{width:28px;height:28px;border:3px solid #fff;border-top-color:transparent;border-radius:50%;animation:s .8s linear infinite}@keyframes s{to{transform:rotate(360deg)}}
+#ld a{color:#fff;font-size:13px;opacity:.85}
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#fff4f8}
+</style></head><body>
+<div id="ld"><img src="icon-192.png" alt=""><div class="sp"></div><div>กำลังเปิดระบบจองรถ...</div>
+<a id="fb" href="#">ถ้าหน้าไม่ขึ้น แตะที่นี่</a></div>
+<script>
+// แก้เป็นลิงก์เว็บแอปของคุณ (ลิงก์ที่ได้ตอนทำให้ใช้งานได้ ลงท้ายด้วย /exec)
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbxm7wzsQ-F8iaoG_Nu3LFEbe3kOMiEQOqaksHOMduRiGnnW_3mpNCMTY90Op-RX_zIjJA/exec';
+document.getElementById('fb').href = GAS_URL;
+const f = document.createElement('iframe');
+f.src = GAS_URL; f.allow = 'clipboard-write';
+f.onload = () => setTimeout(() => document.getElementById('ld').style.display = 'none', 300);
+document.body.appendChild(f);
+</script></body></html>
